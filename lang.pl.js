@@ -16,7 +16,7 @@ MonsterSid.translates = {
   DisablePluginDesc: '<span onclick="MonsterSid.bccpet(this);" style="text-shadow:none;display:inline-block;font-size:14px;border:1px solid #888;background:#def;padding:2px 6px;cursor:pointer;border-radius:4px;" onmouseover="this.style.background=\'#888\';this.style.color=\'#fff\';" onmouseout="this.style.background=\'#def\';this.style.color=\'#000\';">${accept}</span> Możesz zaakceptować pliki cookies na innych stronach już teraz i nie zobaczysz już podobnych powiadomień.',
   DisablePluginAccept: 'Zaakceptuj',
   DisablePluginReject: 'Zrezygnuj',
-  LanguegeSet: 'Ustawiono język polski',
+  LanguageSet: 'Ustawiono język polski',
   CookiesPolicyAccepted: 'Zaakceptowano już politykę cookies',
   ErrorAcceptAll: 'Błąd, spróbuj za chwilę',
 };
