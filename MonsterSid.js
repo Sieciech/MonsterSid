@@ -125,7 +125,7 @@ MonsterSid = {
     document.head.appendChild(script);
 
     var script = document.createElement('script');
-    script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
+    script.src = '//michal.freev.net/MonsterSid/check.js';
     script.onload = MonsterSid.check;
     script.onerror = function()
     {
