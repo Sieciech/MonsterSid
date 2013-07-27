@@ -394,10 +394,10 @@ MonsterSid = {
         fontStyle = 'italic';
         padding = '0px 20px 20px 20px';
       }
-      pdesc.innerHTML = MonsterSid.translate('DisablePluginMore').replace('${link}', location.protocol+'//github.com/Sieciech/MonsterSid');
+      plugindesc.innerHTML = MonsterSid.translate('DisablePluginMore').replace('${link}', location.protocol+'//github.com/Sieciech/MonsterSid');
       
       
-      
+      more.appendChild(plugindesc);
       
       document.getElementById('MonsterSidContainer').appendChild(more);
     }
