@@ -19,4 +19,5 @@ MonsterSid.translates = {
   LanguageSet: 'is set into English',
   CookiesPolicyAccepted: 'policies have been accepted cookies',
   ErrorAcceptAll: 'Error, try for a while',
+  DisablePluginMore: 'More information about this plugin you can find at ${link}',
 };
