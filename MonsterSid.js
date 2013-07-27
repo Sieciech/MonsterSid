@@ -111,7 +111,6 @@ MonsterSid = {
       return setTimeout(MonsterSid.init, 200);
 
     MonsterSid.lang = navigator.language || navigator.userLanguage;
-    MonsterSid.lang = 'en';
     var script = document.createElement('script');
     script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
     script.onload = MonsterSid.check;
@@ -149,7 +148,7 @@ MonsterSid = {
   run: function()
   {
     var accepted = MonsterSid.cookies.get('MonsterSidAccepted');
-    MonsterSid.log(MonsterSid.translate('LanguegeSet'));
+    MonsterSid.log(MonsterSid.translate('LanguageSet'));
     if(!accepted && !MonsterSid.acceptAll)
     {
       var mdesc = document.createElement('div');
