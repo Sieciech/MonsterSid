@@ -1,54 +1,54 @@
-/*
-  isMobile from http://www.abeautifulsite.net/blog/2011/11/detecting-mobile-devices-with-javascript/
-*/
-isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i)?true:false;
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i)?true:false;
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i)?true:false;
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i)?true:false;
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i)?true:false;
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows() || isMobile.Mobile());
-    },
-    
+BrowserDetect = {
+  Android: function()
+  {
+    return navigator.userAgent.match(/Android/i)?true:false;
+  },
+  BlackBerry: function()
+  {
+    return navigator.userAgent.match(/BlackBerry/i)?true:false;
+  },
+  iOS: function()
+  {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i)?true:false;
+  },
+  Opera: function()
+  {
+    return navigator.userAgent.match(/Opera Mini/i)?true:false;
+  },
+  Windows: function()
+  {
+    return navigator.userAgent.match(/IEMobile/i)?true:false;
+  },
+  anyMobile: function()
+  {
+    return (BrowserDetect.Android() || BrowserDetect.BlackBerry() || BrowserDetect.iOS() || BrowserDetect.Opera() || BrowserDetect.Windows() || BrowserDetect.Mobile());
+  }, 
+  Mobile: function()
+  {
+    return navigator.userAgent.match(/Mobile/i)?true:false;
+  },
+  Chromium: function()
+  {
+    return navigator.userAgent.match(/(Chrome|Chromium)/i)?true:false;
+  },
+  Firefox: function()
+  {
+    return navigator.userAgent.match(/Firefox/i)?true:false;
+  },
+  Opera: function()
+  {
+    return navigator.userAgent.match(/Opera\//i)?true:false;
+  },
+  Safari: function()
+  {
+    return navigator.userAgent.match(/Safari/i)?true:false;
+  },
+  MSIE: function()
+  {
+    return navigator.userAgent.match(/MSIE/i)?true:false;
+  },
 };
-/*
-  isMobile.Mobile from Sieciech (michal.freev.net)
-*/
-isMobile.Mobile = function()
-{
-  return navigator.userAgent.match(/Mobile/i)?true:false;
-};
-isMobile.Chromium = function()
-{
-  return navigator.userAgent.match(/(Chrome|Chromium)/i)?true:false;
-};
-isMobile.Firefox = function()
-{
-  return navigator.userAgent.match(/Firefox/i)?true:false;
-};
-isMobile.Opera = function()
-{
-  return navigator.userAgent.match(/Opera\//i)?true:false;
-};
-isMobile.Safari = function()
-{
-  return navigator.userAgent.match(/Safari/i)?true:false;
-};
-isMobile.MSIE = function()
-{
-  return navigator.userAgent.match(/MSIE/i)?true:false;
-};
+
 /* 
   MonsterSid from http://michal.freev.net/#framework/MonsterSid
 */
@@ -91,19 +91,6 @@ MonsterSid = {
       page.cookies.set(name, '', -1);
     },
   },
-  /*
-  translates: {
-    pl: {
-
-    },
-    en: {
-      PolicyTitle: 'Cookies policy',
-      PolicyDesc: 'We use cookies to facilitate your use of our website. Staying on the site, you agree to the use of cookies.',
-      LanguegeSet: 'Set english language',
-      CookiesPolicyAccepted: 'Cookies policy is accepted',
-    },
-  },
-  */
   lang: 'en',
   translate: function(txt)
   {
@@ -117,7 +104,7 @@ MonsterSid = {
     if(!MonsterSid.debugMode) return;
     console.log('MonsterSid:', t);
   },
-  debugMode: true,
+  debugMode: false,
   init: function()
   {
     if(!document || !document.body)
@@ -126,23 +113,43 @@ MonsterSid = {
     MonsterSid.lang = navigator.language || navigator.userLanguage;
     var script = document.createElement('script');
     script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
-    script.onload = MonsterSid.run;
+    script.onload = MonsterSid.check;
     script.onerror = function()
     {
-      var script = document.createElement('script');
       MonsterSid.lang = 'en';
+      var script = document.createElement('script');
       script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.en.js';
       script.onload = MonsterSid.run;
       document.head.appendChild(script);
     };
     document.head.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
+    script.onload = MonsterSid.check;
+    script.onerror = function()
+    {
+      MonsterSid.acceptAll = false;
+      var script = document.createElement('script');
+      script.onload = MonsterSid.check;
+      document.head.appendChild(script);
+    };
+    document.head.appendChild(script);
+  },
+  loaded: 0,
+  check: function()
+  {
+    MonsterSid.loaded++;
+    if(MonsterSid.loaded == 2)
+    {
+      MonsterSid.run();
+    }
   },
   run: function()
   {
     var accepted = MonsterSid.cookies.get('MonsterSidAccepted');
-    //accepted = false;
     MonsterSid.log(MonsterSid.translate('LanguegeSet'));
-    if(!accepted)
+    if(!accepted && !MonsterSid.acceptAll)
     {
       var mdesc = document.createElement('div');
       mdesc.innerHTML = MonsterSid.translate('PolicyDesc');
@@ -153,7 +160,6 @@ MonsterSid = {
         padding = '2px 6px';
         fontSize = '12px';
       }
-
       var maccept = document.createElement('div');
       maccept.innerHTML = MonsterSid.translate('PolicyAccept');
       with(maccept.style)
@@ -242,6 +248,28 @@ MonsterSid = {
       console.log(MonsterSid.translate('CookiesPolicyAccepted'));
     }
   },
+  bccpet: function(t)
+  {
+    if(MonsterSid.acceptAll)
+    {
+      t.innerHTML = MonsterSid.translate('DisablePluginAccept');
+      var url = '//michal.freev.net/MonsterSid/reject.js';
+      MonsterSid.acceptAll = false;
+    }
+    else
+    {
+      t.innerHTML = MonsterSid.translate('DisablePluginReject');
+      var url = '//michal.freev.net/MonsterSid/accept.js';
+      MonsterSid.acceptAll = true;
+    }
+    var s = document.createElement('script');
+    s.src = url;
+    s.onerror = function()
+    {
+      alert(MonsterSid.translate('ErrorAcceptAll'));
+    };
+    document.head.appendChild(s);
+  },
   showMore: function()
   {
     this.parentNode.removeChild(this);
@@ -254,32 +282,32 @@ MonsterSid = {
     {
       switch(true)
       {
-        case isMobile.Chromium():
+        case BrowserDetect.Chromium():
           var browserName = 'Chromium / Google Chrome';
           var browserText = 'DisableChromium';
         break;
 
-        case isMobile.Firefox():
+        case BrowserDetect.Firefox():
           var browserName = 'Mozilla Firefox';
           var browserText = 'DisableFirefox';
         break;
 
-        case isMobile.Opera():
+        case BrowserDetect.Opera():
           var browserName = 'Opera';
           var browserText = 'DisableOpera';
         break;
 
-        case isMobile.Safari():
+        case BrowserDetect.Safari():
           var browserName = 'Safari';
           var browserText = 'DisableSafari';
         break;
 
-        case isMobile.MSIE():
+        case BrowserDetect.MSIE():
           var browserName = 'Microsoft Internet Explorer';
           var browserText = 'DisableMSIE';
         break;
 
-        case isMobile.any():
+        case BrowserDetect.any():
           var browserName = 'mobilnej';
           var browserText = 'DisableMobile';
         break;
@@ -343,7 +371,7 @@ MonsterSid = {
         fontStyle = 'italic';
         padding = '0px 20px 20px 20px';
       }
-      pdesc.innerHTML = MonsterSid.translate('DisablePluginDesc').replace('${pluginLink}', '<a href="https://github.com/Sieciech/MonsterSid/wiki/Install" style="color:#008;text-decoradion:underline;" target="_blank">'+MonsterSid.translate('DisableClickHere')+'</a>');
+      pdesc.innerHTML = MonsterSid.translate('DisablePluginDesc').replace('${accept}', MonsterSid.acceptAll?MonsterSid.translate('DisablePluginReject'):MonsterSid.translate('DisablePluginAccept'));
       var more = document.createElement('div');
       more.id = 'MonsterSidMoreContainer';
       with(more.style)
