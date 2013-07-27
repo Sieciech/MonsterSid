@@ -60,7 +60,7 @@ MonsterSid = {
       {
         var date = new Date();
         date.setTime(date.getTime()+(minuts*60000));
-          var expires = '; expires='+date.toGMTString();
+        var expires = '; expires='+date.toGMTString();
       }
       else
       {
@@ -125,7 +125,7 @@ MonsterSid = {
 
     MonsterSid.lang = navigator.language || navigator.userLanguage;
     var script = document.createElement('script');
-    script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang..'+MonsterSid.lang+'.js';
+    script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
     script.onload = MonsterSid.run;
     script.onerror = function()
     {
