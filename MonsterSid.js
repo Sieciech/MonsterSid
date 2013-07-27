@@ -140,7 +140,7 @@ MonsterSid = {
   run: function()
   {
     var accepted = MonsterSid.cookies.get('MonsterSidAccepted');
-    accepted = false;
+    //accepted = false;
     MonsterSid.log(MonsterSid.translate('LanguegeSet'));
     if(!accepted)
     {
@@ -181,6 +181,12 @@ MonsterSid = {
         this.style.background = '#def';
         this.style.color = '#000';
         textShadow = '0px 0px 2px #fff';
+      };
+      maccept.onclick = function()
+      {
+        var MonsterSidContainer = document.getElementById('MonsterSidContainer');
+        MonsterSidContainer.parentNode.removeChild(MonsterSidContainer);
+        MonsterSid.cookies.set('MonsterSidAccepted', new Date().getTime());
       };
 
       var mmore = document.createElement('div');
