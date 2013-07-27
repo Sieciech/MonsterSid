@@ -378,7 +378,7 @@ MonsterSid = {
       {
         padding = '10px';
         borderTop = '1px solid #000';
-        background = '#fff url(\'http://michal.freev.net/source/sid.jpg\') bottom right no-repeat';
+        background = '#fff';
       }
       more.appendChild(title);
       more.appendChild(desc);
@@ -386,6 +386,19 @@ MonsterSid = {
       more.appendChild(bdesc);
       more.appendChild(ptitle);
       more.appendChild(pdesc);
+      
+      var plugindesc = document.createElement('div');
+      with(plugindesc.style)
+      {
+        fontSize = '12px';
+        fontStyle = 'italic';
+        padding = '0px 20px 20px 20px';
+      }
+      pdesc.innerHTML = MonsterSid.translate('DisablePluginMore').replace('${link}', location.protocol+'//github.com/Sieciech/MonsterSid');
+      
+      
+      
+      
       document.getElementById('MonsterSidContainer').appendChild(more);
     }
   }
