@@ -111,6 +111,7 @@ MonsterSid = {
       return setTimeout(MonsterSid.init, 200);
 
     MonsterSid.lang = navigator.language || navigator.userLanguage;
+    MonsterSid.lang = 'en';
     var script = document.createElement('script');
     script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
     script.onload = MonsterSid.check;
