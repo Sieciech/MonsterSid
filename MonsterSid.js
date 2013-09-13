@@ -214,7 +214,6 @@ MonsterSid = {
       with(container.style)
       {
         display = 'block';
-        
         position = 'absolute';
         zIndex = '100000000000';
         top = '0px';
