@@ -120,9 +120,9 @@ MonsterSid = {
       var script = document.createElement('script');
       script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.en.js';
       script.onload = MonsterSid.run;
-      document.head.appendChild(script);
+      document.getElementsByTagName('head')[0].appendChild(script);
     };
-    document.head.appendChild(script);
+    document.getElementsByTagName('head')[0].appendChild(script);
 
     var script = document.createElement('script');
     script.src = '//michal.freev.net/MonsterSid/check.js';
@@ -132,9 +132,9 @@ MonsterSid = {
       MonsterSid.acceptAll = false;
       var script = document.createElement('script');
       script.onload = MonsterSid.check;
-      document.head.appendChild(script);
+      document.getElementsByTagName('head')[0].appendChild(script);
     };
-    document.head.appendChild(script);
+    document.getElementsByTagName('head')[0].appendChild(script);
   },
   loaded: 0,
   check: function()
