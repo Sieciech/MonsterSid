@@ -22,3 +22,4 @@ MonsterSid.translates = {
   DisablePluginMore: 'Więcej na temat dodatku znajdziesz pod adresem ${link}',
   END: ''
 };
+MonsterSid.check();
