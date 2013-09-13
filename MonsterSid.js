@@ -133,7 +133,6 @@ MonsterSid = {
   loaded: 0,
   check: function()
   {
-    alert(MonsterSid.loaded);
     MonsterSid.loaded++;
     if(MonsterSid.loaded == 2)
     {
