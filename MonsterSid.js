@@ -241,7 +241,7 @@ MonsterSid = {
       tr.appendChild(maccept);
       container.appendChild(tr);
 
-      document.body.appendChild(container);
+      document.getElementsByTagName('body')[0].appendChild(container);
     }
     else
     {
