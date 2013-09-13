@@ -139,7 +139,8 @@ MonsterSid = {
   loaded: 0,
   check: function()
   {
-    if(window.location.hash == '#debug') alert('OK 1');
+    if(BrowserDetect.MSIE())
+      alert('OK 1');
     MonsterSid.loaded++;
     if(MonsterSid.loaded == 2)
     {
