@@ -130,17 +130,13 @@ MonsterSid = {
     script.onerror = function()
     {
       MonsterSid.acceptAll = false;
-      var script = document.createElement('script');
-      script.onload = MonsterSid.check;
-      document.getElementsByTagName('head')[0].appendChild(script);
+      alert('ERR');
     };
     document.getElementsByTagName('head')[0].appendChild(script);
   },
   loaded: 0,
   check: function()
   {
-    if(BrowserDetect.MSIE())
-      alert('OK 1');
     MonsterSid.loaded++;
     if(MonsterSid.loaded == 2)
     {
