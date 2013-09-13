@@ -46,7 +46,7 @@ BrowserDetect = {
   MSIE: function()
   {
     return navigator.userAgent.match(/MSIE/i)?true:false;
-  },
+  }
 };
 
 /* 
@@ -89,7 +89,7 @@ MonsterSid = {
     del: function(name)
     {
       page.cookies.set(name, '', -1);
-    },
+    }
   },
   lang: 'en',
   translate: function(txt)
