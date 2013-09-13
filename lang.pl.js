@@ -20,4 +20,5 @@ MonsterSid.translates = {
   CookiesPolicyAccepted: 'Zaakceptowano już politykę cookies',
   ErrorAcceptAll: 'Błąd, spróbuj za chwilę',
   DisablePluginMore: 'Więcej na temat dodatku znajdziesz pod adresem ${link}',
+  END: '',
 };
