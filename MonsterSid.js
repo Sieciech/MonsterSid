@@ -113,30 +113,27 @@ MonsterSid = {
     MonsterSid.lang = navigator.language || navigator.userLanguage;
     var script = document.createElement('script');
     script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.'+MonsterSid.lang+'.js';
-    script.onload = MonsterSid.check;
     script.onerror = function()
     {
       MonsterSid.lang = 'en';
       var script = document.createElement('script');
       script.src = '//rawgithub.com/Sieciech/Monstersid/master/lang.en.js';
-      script.onload = MonsterSid.run;
       document.getElementsByTagName('head')[0].appendChild(script);
     };
     document.getElementsByTagName('head')[0].appendChild(script);
 
     var script = document.createElement('script');
     script.src = '//michal.freev.net/MonsterSid/check.js';
-    script.onload = MonsterSid.check;
     script.onerror = function()
     {
       MonsterSid.acceptAll = false;
-      alert('ERR');
     };
     document.getElementsByTagName('head')[0].appendChild(script);
   },
   loaded: 0,
   check: function()
   {
+    alert(MonsterSid.loaded);
     MonsterSid.loaded++;
     if(MonsterSid.loaded == 2)
     {
