@@ -48,7 +48,7 @@ BrowserDetect = {
     return navigator.userAgent.match(/MSIE/i)?true:false;
   }
 };
-
+var MSIE = BrowserDetect.MSIE();
 /* 
   MonsterSid from http://michal.freev.net/#framework/MonsterSid
 */
@@ -158,7 +158,8 @@ MonsterSid = {
       maccept.innerHTML = MonsterSid.translate('PolicyAccept');
       with(maccept.style)
       {
-        display = 'table-cell';
+        if(!MSIE)
+          display = 'table-cell';
         width = '75px';
         textAlign = 'left';
         fontSize = '14px';
@@ -193,7 +194,8 @@ MonsterSid = {
       mmore.innerHTML = MonsterSid.translate('PolicyMore');
       with(mmore.style)
       {
-        display = 'table-cell';
+        if(!MSIE)
+          display = 'table-cell';
         cursor = 'pointer';
         width = '130px';
         textAlign = 'left';
@@ -207,7 +209,8 @@ MonsterSid = {
       container.id = 'MonsterSidContainer';
       with(container.style)
       {
-        display = 'block';
+        if(!MSIE)
+          display = 'block';
         position = 'absolute';
         zIndex = '100000000000';
         top = '0px';
@@ -223,7 +226,8 @@ MonsterSid = {
       var tr = document.createElement('div');
       with(tr.style)
       {
-        display = 'table';
+        if(!MSIE)
+          display = 'table';
         width = '100%';
         borderCollapse = 'separate';
         borderSpacing = '2px';
