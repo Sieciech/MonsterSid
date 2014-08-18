@@ -1,6 +1,6 @@
 MonsterSid.translates = {
   PolicyTitle: 'Polityka plików cookies',
-  PolicyDesc: 'Korzystamy z plików cookies, aby ułatwić Ci korzystanie z naszej strony. Zostając na stronie zgadzasz się na użycie plików cookie.',
+  PolicyDesc: 'Aby ułatwić Ci korzystanie z naszej strony, korzystamy z plików cookies. Zostając na stronie zgadzasz się na ich użycie.',
   PolicyAccept: 'Akceptuję',
   PolicyMore: 'Więcej informacji',
   DisableTitle: 'Czym sa pliki cookies?',
