@@ -176,13 +176,13 @@ MonsterSid = {
       {
         this.style.background = '#888';
         this.style.color = '#fff';
-        textShadow = '0px 0px 6px #444';
+        this.style.textShadow = '0px 0px 6px #444';
       };
       maccept.onmouseout = function()
       {
         this.style.background = '#eee';
         this.style.color = '#000';
-        textShadow = '0px 0px 2px #fff';
+        this.style.textShadow = '0px 0px 2px #fff';
       };
       maccept.onclick = function()
       {
