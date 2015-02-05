@@ -198,7 +198,8 @@ MonsterSid = {
         if(!MSIE)
           display = 'table-cell';
         cursor = 'pointer';
-        width = '130px';
+        width = '100px';
+        whiteSpace = 'nowrap';
         textAlign = 'left';
         padding = '2px 6px';
         fontSize = '12px';
