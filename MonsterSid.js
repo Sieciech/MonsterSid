@@ -164,7 +164,7 @@ MonsterSid = {
         textAlign = 'left';
         fontSize = '14px';
         border = '1px solid #888';
-        background = '#def';
+        background = '#eee';
         padding = '2px 6px';
         textAlign = 'center';
         cursor = 'pointer';
@@ -179,7 +179,7 @@ MonsterSid = {
       };
       maccept.onmouseout = function()
       {
-        this.style.background = '#def';
+        this.style.background = '#eee';
         this.style.color = '#000';
         textShadow = '0px 0px 2px #fff';
       };
@@ -220,7 +220,7 @@ MonsterSid = {
         color = '#000';
         fontSize = '14px';
         textShadow = '0px 0px 2px #fff, 0px 0px 4px #fff, 0px 0px 6px #fff';
-        boxShadow = '0px 0px 12px 6px #000';
+        boxShadow = '0px 0px 0px 2px rgba(0,0,0, 0.5)';
       }
       
       var tr = document.createElement('div');
