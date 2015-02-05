@@ -170,6 +170,7 @@ MonsterSid = {
         cursor = 'pointer';
         borderRadius = '4px';
         textShadow = '0px 0px 2px #fff';
+        verticalAlign = 'middle';
       }
       maccept.onmouseover = function()
       {
@@ -202,6 +203,7 @@ MonsterSid = {
         padding = '2px 6px';
         fontSize = '12px';
         textAlign = 'right';
+        verticalAlign = 'middle';
       }
       mmore.onclick = MonsterSid.showMore;
 
