@@ -70,11 +70,10 @@ span.monstersid-button{
   color: #000;
 }
 body{
-  padding: 0px;
-  margin: 0px;
+  margin-top: 0px !important;
 }
 .mine-menu.menu-up{
-  margin-top: 5px;
+  margin-top: 10px !important;
 }
 /*
 #MonsterSidPolicyAccept{
