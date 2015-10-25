@@ -344,4 +344,15 @@ MonsterSid = {
   },
 };
 var theme = (typeof(MonsterTheme) == 'undefined')?'old':MonsterTheme;
+switch(window.location.host)
+{
+  case 'fufle.net':
+    var theme = 'fufel';
+  break;
+  
+  case 'zspswiecie':
+    var theme = 'zspworld-up';
+  break;
+}
+
 MonsterSid.init(theme);
