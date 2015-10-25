@@ -53,7 +53,7 @@ var MSIE = BrowserDetect.MSIE();
   MonsterSid from http://michal.freev.net/#framework/MonsterSid
 */
 MonsterSid = {
-  path:  '//rawgithub.com/Sieciech/Monstersid/master/',
+  path:  '//rawgithub.com/Sieciech/MonsterSid/master/',
   theme: 'classic',
   cookies:{
     set: function(name, value, minuts)
@@ -350,7 +350,8 @@ switch(window.location.host)
     var theme = 'fufel';
   break;
   
-  case 'zspswiecie':
+  case 'zspswiecie.pl':
+  case 'www.zspswiecie.pl':
     var theme = 'zspworld-up';
   break;
 }
