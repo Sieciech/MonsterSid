@@ -23,8 +23,6 @@ MonsterSid.run = function()
       MonsterSidContainer.parentNode.removeChild(MonsterSidContainer);
       MonsterSid.cookies.set('MonsterSidAccepted', new Date().getTime());
       
-      var MonsterShadow = document.getElementById('MonsterShadow');
-      MonsterShadow.parentNode.removeChild(MonsterShadow);
     };
 
     var mmore = document.createElement('div');
@@ -50,15 +48,6 @@ MonsterSid.run = function()
     var body = document.body || document.getElementsByTagName('body')[0];
     body.insertBefore(container, body.children[0]);
     
-    setTimeout(function()
-    {
-      var container = document.getElementById('MonsterSidContainer');
-      var sh = document.createElement('div');
-      sh.id = 'MonsterShadow';
-      console.log(container.innerHeight);
-      sh.style.height = (container.innerHeight)+'px';
-      body.insertBefore(sh, body.children[0]);
-    }, 100);
   }
   else
   {
