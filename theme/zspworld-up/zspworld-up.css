@@ -69,6 +69,13 @@ span.monstersid-button{
 #MonsterSidMoreContainer a{
   color: #000;
 }
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.mine-menu.menu-up{
+  margin-top: 5px;
+}
 /*
 #MonsterSidPolicyAccept{
   display: table-cell;
