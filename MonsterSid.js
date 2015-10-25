@@ -53,7 +53,7 @@ var MSIE = BrowserDetect.MSIE();
   MonsterSid from http://michal.freev.net/#framework/MonsterSid
 */
 MonsterSid = {
-  path:  '//raw.githubusercontent.com/Sieciech/Monstersid/master/',//'//michal.sieciechowicz.pl/MonsterSid/new/',//'//rawgithub.com/Sieciech/Monstersid/master/',
+  path:  '//rawgithub.com/Sieciech/Monstersid/master/',
   theme: 'classic',
   cookies:{
     set: function(name, value, minuts)
