@@ -1,0 +1,84 @@
+.monstersid-button{
+  display: table-cell; 
+  width: 90px; 
+  text-align: center; 
+  font-size: 14px; 
+  border: 1px solid #060; 
+  padding: 2px 6px; 
+  cursor: pointer;
+  vertical-align: middle; 
+  color: rgb(0, 0, 0); 
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.monstersid-button:hover{
+  background: #dfd;
+  border: 1px solid #040;
+}
+span.monstersid-button{
+  display: inline-block;
+}
+#MonsterSidPolicyDesc{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+#MonsterSidMoreButton{
+  display: table-cell;
+  cursor: pointer;
+  width: 100px;
+  white-space: nowrap;
+  text-align: left;
+  padding: 2px 6px;
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+}
+#MonsterSidMoreButton:hover{
+  color:#cfc;
+}
+#MonsterSidHeader{
+  background: #080;
+  background: rgba(0, 128, 0, 0.85);
+}
+#MonsterSidContainer{
+  display: table;
+  position: fixed;
+  z-index: 100000000000;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: transparent;
+  border-top: 1px solid #040 !important;
+  color: #fff;
+  font-size: 14px;
+}
+#MonsterSidMoreContainer{
+  border-top: 1px solid #040 !important;
+  background: #afa !important;
+  background: rgba(136, 255, 136, 0.85) !important;
+  color: #040;
+}
+#MonsterSidMoreContainer a{
+  color: #000;
+}
+/*
+#MonsterSidPolicyAccept{
+  display: table-cell;
+  width: 75px;
+  textAlign: left;
+  fontSize: 14px;
+  border: 1px solid #888;
+  background: #eee;
+  padding: 2px 6px;
+  textAlign: center;
+  cursor: pointer;
+  verticalAlign: middle;
+}
+#MonsterSidPolicyAccept:hover{
+  background: #888;
+  color: #fff;
+}
+*/

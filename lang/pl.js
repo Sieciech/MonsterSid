@@ -1,0 +1,26 @@
+MonsterSid.translates = {
+  HideText: 'Ukryj',
+  PolicyTitle: 'Polityka plików cookies',
+  PolicyDesc: 'Aby ułatwić Ci korzystanie z naszej strony, stosujemy pliki  cookies. Zostając na stronie zgadzasz się na ich użycie.',
+  PolicyAccept: 'Akceptuję',
+  PolicyMore: 'Więcej informacji',
+  DisableTitle: 'Czym sa pliki cookies?',
+  DisableBrowser: 'Jak wyłączyć pliki cookies w przeglądarce ${browser}',
+  DisableFirefox: 'W menu "Narzędzia" wybierz "Opcje" i w nich zakładkę "Prywatność".<br>Przeglądarka daje Ci możliwość zaznaczenia, że nie chcesz być śledzony w ogóle albo usunięcia pojedynczych ciasteczek poszczególnych witryn.',
+  DisableMSIE: 'W menu "Narzędzia" wybierz "Opcje internetowe" i w nich zakładkę "Prywatność".<br>Specjalnym suwakiem możesz regulować ogólny poziom prywatności albo przyciskiem "Witryny" zarządzać ustawieniami poszczególnych serwisów internetowych.',
+  DisableChromium: 'W menu ukrytym pod trzema poziomymi kreseczkami w prawym górnym rogu przeglądarki wybierz "Narzędzia" a potem "Wyczyść dane przeglądania...". Oprócz możliwości czyszczenia plików cookie, znajduje się tam link "Więcej informacji", który prowadzi do szczegółowego opisu funkcji prywatności przeglądarki.',
+  DisableOpera: 'Przyciskiem "Opera" w lewym górnym rogu otwórz menu i wybierz w nim "Ustawienia" i dalej "Wyczyść historię przeglądania...".<br>Oprócz możliwości skasowania już ustawionych plików cookie, jest tam też przycisk "Zarządzaj ciasteczkami..." prowadzący do bardziej zaawansowanych opcji dla poszczególnych witryn.',
+  DisableSafari: 'W menu "Safari" wybierz "Preferencje" i w nich zakładkę "Prywatność". Znajdziesz w niej liczne opcje dotyczące plików cookie.',
+  DisableMobile: 'Każdy model telefonu może tę funkcję obsługiwać w inny sposób. Dlatego zachęcamy do zapoznania się z opcjami prywatności w dokumentacji na stronie internetowej producenta Twojego urządzenia mobilnego.',
+  DisableDesc: 'Wiele stron internetowych zapisuje na Twoim komputerze, a dokładniej w schowku konkretnej przeglądarki (Firefox, Internet Explorer, Chrome i inne) na Twoim koncie użytkownika komputera lub telefonu, na którym łączysz się z Siecią, tzw. pliki cookie.<br>Zazwyczaj pliki cookie są bardzo pożyteczne. Dzięki nim zapamiętywane są Twoje indywidualne ustawienia i dzięki nim możesz się zalogować do swojej poczty.<br>Autorzy stron internetowych wiedzą dzięki nim, jak wielu użytkowników do nich zagląda i co konkretnie czytają, a co obchodzą z daleka.<br>Informacje zbierane przy użyciu plików cookie mogą też służyć do zbierania informacji o Tobie w celach handlowych. Np. jeżeli często wchodzisz na strony o książkach, będziesz widział więcej reklam księgarni.<br>Na szczęście, jeżeli uważasz, że obecność plików cookie narusza Twoją prywatność, możesz w każdej chwili je wyłączyć albo dla konkretnej witryny albo w ogóle dla wszystkich połączeń z Twojej przeglądarki.',
+  DisablePluginTitle: 'Jak automatycznie akceptować pliki cookies?',
+  DisablePluginDesc: '<span class="monstersid-button" onclick="MonsterSid.bccpet(this);">${accept}</span> Możesz zaakceptować pliki cookies na innych stronach już teraz i nie zobaczysz już podobnych powiadomień.',
+  DisablePluginAccept: 'Zaakceptuj',
+  DisablePluginReject: 'Zrezygnuj',
+  LanguageSet: 'Ustawiono język polski',
+  CookiesPolicyAccepted: 'Zaakceptowano już politykę cookies',
+  ErrorAcceptAll: 'Błąd, spróbuj za chwilę',
+  DisablePluginMore: 'Więcej na temat dodatku znajdziesz pod adresem <a href="${link}" target="_blank">${link}</a>',
+  END: ''
+};
+MonsterSid.check();
